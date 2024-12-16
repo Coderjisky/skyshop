@@ -1,0 +1,234 @@
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, /*#3498db, #e74c3c, #9b59b6, #e67e22*/ #3498db,#e74c3c,#9b59b6,#e67e22,#1abc9c,#2ecc71,#f1c40f,#34495e,#d35400,#16a085);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            box-shadow: 0 0 10px #000;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #chk1 {
+            display: none;
+        }
+
+        i{
+        	color: #fff;
+        	cursor: pointer;
+        }
+
+        header .logo {
+            flex: 1;
+            color: #fff;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        header .search-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background: #f2f2f2;
+            border-radius: 30px;
+            color: gray;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+
+        .search-box button {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(0.9);
+            background: gray;
+        }
+
+        header ul {
+            flex: 2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        header ul li {
+            list-style: none;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+           /* padding: 10px 15px;*/
+        }
+
+        header ul li a:hover {
+            border-bottom: 2px solid cadetblue;
+        }
+
+        header .menu {
+            font-size: 2.5em;
+            display: none;
+        }
+
+        @media (max-width: 1000px) {
+        	.search-box button{
+        		position: absolute;
+        	}
+            header ul {
+                position: fixed;
+                top: 100px;
+                right: -100%;
+                background: rgba(0, 0, 0, 0.5);
+                height: calc(100vh - 100px);
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+                transition: right 0.5s linear;
+            }
+        header .menu {
+            display: block;
+            width: 100px;
+            text-align: center;
+        }
+
+        #chk1:checked ~ ul {
+            right: 0;
+        }
+      }  
+
+        @media (max-width: 600px) {
+            header .logo {
+                font-size: 10px;
+                margin-left: 8px;
+            }
+
+            header ul {
+                width: 100%;
+            }
+
+            header ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+
+
+/* Header */
+header {
+    width: 100%;
+    height: 100px; /* Ensure this matches your header's actual height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Keeps header fixed at the top */
+    top: 0; /* Ensures it stays at the top */
+    left: 0; /* Prevents horizontal shifting */
+    z-index: 99; /* Keeps it above other elements */
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.5); /* Adds semi-transparent background */
+}
+
+
+
+
+
+
+
+/* Slider */
+#slider {
+    margin-top: 120px; /* Adds space equal to header's height */
+    margin-bottom: 40px;
+}
+
+#slider .carousel-inner .item img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Advantage Styles */
+.box{
+	background: #fff;
+	margin: 0 0 30px;
+	border: solid 1px #e6e6e6;
+	padding: 20px;
+	box-shadow: 0 1ox 5px rgba(0, 0, 0, 0.1);
+}
+#advantage{
+	text-align: center;
+}
+#advantage .box .icon{
+	position: absolute;
+	font-size: 120px;
+	width: 100%;
+	text-align: center;
+	top: 20px;
+	height: 100%;
+	float: left;
+	color: #eeeeee;
+	transition: all 0.2s ease-out;
+	z-index: 1;
+	box-sizing: border-box;
+}
+#advantage .box h3{
+	position: relative;
+	margin: 0 0 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	z-index: 2;
+}
+#advantage .box h3 a:hover{
+	text-decoration: none;
+}
+#advantage .box p{
+	position: relative;
+	color: #555555;
+	z-index: 2;
+}
